@@ -1,0 +1,15 @@
+<div>
+    <mat-toolbar>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <img src="assets/instagram.svg">
+        </button>
+        <h2>
+            Instagram
+        </h2>
+    </mat-toolbar>
+      
+</div>
+<div class="box">
+    <app-leftpanel [imageList]="imageList" (preview)="selectPreviewImg($event)" (updateSortOrder)="sortBy($event)"></app-leftpanel>
+    <app-preview [selectedImage]="selectedPreviewImage" (updateLikes)="updateLike($event)" ></app-preview>
+</div>

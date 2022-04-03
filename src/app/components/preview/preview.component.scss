@@ -1,0 +1,45 @@
+.like-icon {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+
+.like-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.container {
+    width: 75vw;
+    max-width: 930px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid #f2f2f2;
+    width: 33.33vw; /*These properties are changed*/
+    height: 33.33vw; /*These properties are changed*/
+    margin-right: 30px;
+}
+  
+.card>img {
+    width: 33.33vw; /*These properties are changed*/
+    height: 33.33vw; /*These properties are changed*/
+    object-fit: cover; /*These properties are changed*/
+}
+
+
+p.likes {
+    margin-left: 10px;
+}

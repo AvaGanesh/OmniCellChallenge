@@ -1,0 +1,26 @@
+<form>
+    <mat-form-field appearance="fill">
+      <mat-label>Sort by</mat-label>
+      <mat-select (selectionChange)="updateSortingOrder($event)" name="item">
+        <mat-option *ngFor="let item of sortingOrder" [value]="item">
+          {{item}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+</form>
+<mat-card *ngFor="let item of imageList;let i = index;" class="example-card" (click)="showPreview({index: i, data: item})">
+    <img mat-card-image src="{{item.Image}}" alt="item" class="example-header-image">
+    <div class="row">
+        <div class="like-panel">
+            <img class="like-icon" src="{{item.isLiked ? 'assets/heart-filled.png' : 'assets/heart-outline.png'}}" >
+            <p class="likes">
+                {{item?.likes}} likes
+            </p>
+        </div>
+        <div>
+            <p>
+                {{item?.timestamp | date: 'mediumDate'}}
+            </p>
+        </div>
+    </div> 
+</mat-card>

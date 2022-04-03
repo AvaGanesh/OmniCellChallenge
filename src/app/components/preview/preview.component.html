@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="card" *ngIf="selectedImage">
+        <img src="{{selectedImage.Image}}" alt="item" class="example-header-image">
+        <div class="row">
+            <div class="like-panel">
+                <img class="like-icon" (click)="likeImage()" src="{{selectedImage.isLiked ? 'assets/heart-filled.png' : 'assets/heart-outline.png'}}" >
+                <p class="likes">
+                    {{selectedImage?.likes}} likes
+                </p>
+            </div>
+            <div>
+                <p>
+                    {{selectedImage?.timestamp | date: 'mediumDate'}}
+                </p>
+            </div>
+        </div> 
+    </div>
+</div>
